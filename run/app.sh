@@ -10,5 +10,6 @@ if ! [ -x "$(command -v yarn)" ]; then
   exit 1
 fi
 cd app
-echo "START(APP PORT=$PORT )"
-yarn dev --port $PORT
+echo "START(APP PORT=$PORT)"
+yarn install
+yarn dev

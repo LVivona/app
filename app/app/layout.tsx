@@ -1,19 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Space_Mono } from 'next/font/google'
 import './globals.css'
-import { Header } from './components'
 
-import "react-responsive-modal/styles.css"
-import "@/app/globals.css"
+import 'react-responsive-modal/styles.css'
+import '@/app/globals.css'
+import { ThemeProvider } from './context/theme'
+import { ModalProvider } from './context/modal'
+import { UserProiver } from './context/user'
 
 export const metadata: Metadata = {
-  title: "dhub",
-  description: "dhub - the hub for modules. built with commune-ai/commune",
+  title: 'dhub',
+  description: 'dhub - the hub for modules. built with commune-ai/commune',
   robots: 'all',
-  icons: [{ rel: 'icon', url: '/favicon.ico' }]
+  icons: [{ rel: 'icon', url: '/favicon.ico' }],
 }
 
-const inter = Inter({ subsets: ['latin'] })
+const space_mono = Space_Mono({ subsets : ['latin'], weight : "400" })
 
 export default function RootLayout({
   children,
@@ -21,11 +23,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} h-full relative bg-gray-900`}>
-          <Header />
-          {children}
-      </body>
+    <html lang='en'>
+      <ThemeProvider>
+        <UserProiver>
+          <body className={`${space_mono.className} relative h-full`}>
+            <ModalProvider>{children}</ModalProvider>
+          </body>
+        </UserProiver>
+      </ThemeProvider>
     </html>
   )
 }

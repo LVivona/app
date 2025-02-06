@@ -1,4 +1,4 @@
 
-export { Header } from './Header'
+export { Header } from './layout/Header'
 export { Loading } from './Loading'
-export { Footer } from './Footer'
+export { Footer } from './layout/Footer'

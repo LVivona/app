@@ -2,15 +2,15 @@ import React from 'react'
 
 export function Loading() {
   return (
-    <div className="grid h-screen w-screen place-content-center bg-black text-white">
+    <div className='grid h-screen w-screen place-content-center bg-black text-white'>
       <svg
-        aria-hidden="true"
-        className="h-8 w-8 animate-spin fill-green-400 text-gray-600"
-        viewBox="0 0 100 101"
-        fill="none"
+        aria-hidden='true'
+        className='h-8 w-8 animate-spin fill-green-400 text-gray-600'
+        viewBox='0 0 100 101'
+        fill='none'
       >
         <path
-          d="M100 50.5908C100 78.2051 77.6142 
+          d='M100 50.5908C100 78.2051 77.6142 
             100.591 50 100.591C22.3858 100.591 
             0 78.2051 0 50.5908C0 22.9766 22.3858 
             0.59082 50 0.59082C77.6142 0.59082 
@@ -21,11 +21,11 @@ export function Loading() {
             50.5908C90.9186 27.9921 72.5987 
             9.67226 50 9.67226C27.4013 
             9.67226 9.08144 27.9921 9.08144 
-            50.5908Z"
-          fill="currentColor"
+            50.5908Z'
+          fill='currentColor'
         />
         <path
-          d="M93.9676 39.0409C96.393 
+          d='M93.9676 39.0409C96.393 
             38.4038 97.8624 35.9116 
             97.0079 33.5539C95.2932 
             28.8227 92.871 24.3692 
@@ -49,11 +49,11 @@ export function Loading() {
             28.9121 86.7997 32.2913 
             88.1811 35.8758C89.083 
             38.2158 91.5421 39.6781 
-            93.9676 39.0409Z"
-          fill="currentFill"
+            93.9676 39.0409Z'
+          fill='currentFill'
         />
       </svg>
-      <span className="sr-only">Loading...</span>
+      <span className='sr-only'>Loading...</span>
     </div>
   )
 }
